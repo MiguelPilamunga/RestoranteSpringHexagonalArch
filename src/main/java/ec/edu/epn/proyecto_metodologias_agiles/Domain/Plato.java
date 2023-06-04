@@ -22,6 +22,7 @@ public class Plato {
     @Column(name = "precio")
     private double precio;
 
+
     @Column(name = "resena")
     private String reseña;
 
