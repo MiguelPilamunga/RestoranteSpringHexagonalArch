@@ -14,6 +14,8 @@ public class PlatosUseCase implements PlatosInputPort {
     @Autowired
     PlatosJPAInterface platosJPAInterface;
 
+
+
     @Override
     public Plato createPlatoRestaurante( Plato plato) {
         return platosJPAInterface.save(plato);

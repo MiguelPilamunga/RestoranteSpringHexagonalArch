@@ -7,6 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ProyectoMetodologiasAgilesApplication {
 
 	public static void main(String[] args) {
+
+		System.out.println("inicia!!");
 		SpringApplication.run(ProyectoMetodologiasAgilesApplication.class, args);
 	}
 

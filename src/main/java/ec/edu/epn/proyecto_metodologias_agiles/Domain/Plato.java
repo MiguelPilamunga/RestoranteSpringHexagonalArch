@@ -4,9 +4,9 @@ import lombok.*;
 @Builder
 @Getter
 @Setter
-@Entity
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
 @Table(name = "platos")
 public class Plato {
     @Id
@@ -14,7 +14,7 @@ public class Plato {
     @Column(name = "id" , unique = true ,nullable = false)
     private Long id;
 
-    @Column(name = "nombre", unique = true )
+    @Column(name = "nombre")
     private String nombre;
 
     @Column(name = "descripcion")

@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Table(name = "clientes")
 public class Cliente extends Persona {
-    @Column(name = "codigo_cliente")
+    @Column(name = "codigo_cliente" ,unique = true ,nullable = false )
     private String codigoCliente;
 
     @Column(name = "correo_electronico")
