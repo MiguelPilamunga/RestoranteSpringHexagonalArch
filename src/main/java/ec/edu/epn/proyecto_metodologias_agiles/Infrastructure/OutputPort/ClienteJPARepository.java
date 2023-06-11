@@ -1,7 +1,7 @@
 package ec.edu.epn.proyecto_metodologias_agiles.Infrastructure.OutputPort;
 
-import ec.edu.epn.proyecto_metodologias_agiles.Domain.Plato;
+import ec.edu.epn.proyecto_metodologias_agiles.Domain.Cliente;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface PlatosJPAInterface extends JpaRepository<Plato, Long> {
+public interface ClienteJPARepository extends JpaRepository<Cliente,Long> {
 }

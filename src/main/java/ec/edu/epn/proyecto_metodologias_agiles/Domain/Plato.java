@@ -11,9 +11,10 @@ import lombok.*;
 public class Plato {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id" , unique = true ,nullable = false)
     private Long id;
 
-    @Column(name = "nombre")
+    @Column(name = "nombre", unique = true )
     private String nombre;
 
     @Column(name = "descripcion")

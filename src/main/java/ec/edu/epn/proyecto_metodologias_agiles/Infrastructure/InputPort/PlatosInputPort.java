@@ -11,4 +11,7 @@ public interface PlatosInputPort {
     public Optional<Plato> getById(Long PlatoRestaurante_id);
 
     public ArrayList<Plato> getAllDishes();
+
+
+    public  void deleteDish(Plato plato);
 }

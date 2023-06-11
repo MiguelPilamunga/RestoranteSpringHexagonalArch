@@ -5,8 +5,6 @@ import ec.edu.epn.proyecto_metodologias_agiles.Infrastructure.InputPort.PlatosIn
 import ec.edu.epn.proyecto_metodologias_agiles.Infrastructure.OutputPort.PlatosJPAInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.ArrayList;
 import java.util.Optional;
@@ -14,21 +12,26 @@ import java.util.Optional;
 @Service
 public class PlatosUseCase implements PlatosInputPort {
     @Autowired
-    PlatosJPAInterface platosJpaInterface;
+    PlatosJPAInterface platosJPAInterface;
 
     @Override
     public Plato createPlatoRestaurante( Plato plato) {
-        return platosJpaInterface.save(plato);
+        return platosJPAInterface.save(plato);
     }
 
     @Override
     public Optional<Plato> getById( Long PlatoRestaurante_id) {
-        return platosJpaInterface.findById(PlatoRestaurante_id);
+        return platosJPAInterface.findById(PlatoRestaurante_id);
     }
 
     @Override
     public ArrayList<Plato> getAllDishes() {
-        return ((ArrayList<Plato>) platosJpaInterface.findAll());
+        return ((ArrayList<Plato>) platosJPAInterface.findAll());
+    }
+
+    @Override
+    public void deleteDish(Plato plato){
+        platosJPAInterface.delete(plato);
     }
 
 }
